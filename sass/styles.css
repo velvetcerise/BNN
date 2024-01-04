@@ -139,7 +139,7 @@ footer .row {
 }
 
 .header {
-  height: 95vh;
+  height: 92vh;
   padding: 20px;
   background-image: url("../img/background/background@2x.png");
   background-repeat: no-repeat;
@@ -151,6 +151,7 @@ footer .row {
   .header {
     height: unset;
     padding: 20px;
+    background-position: 0 -12PX;
   }
 }
 .header__logo-box {
@@ -169,10 +170,20 @@ footer .row {
   font-weight: bold;
   font-size: 53px;
 }
+@media (max-width: 599px) {
+  .header .heading-primary span {
+    font-size: 40px;
+  }
+}
 .header .heading-primary span:first-child {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 44px;
+}
+@media (max-width: 599px) {
+  .header .heading-primary span:first-child {
+    font-size: 33px;
+  }
 }
 .header .heading-primary::after {
   content: "";
@@ -231,9 +242,9 @@ footer .row {
   text-align: center;
   padding: 0 70px;
 }
-@media (max-width: 430px) {
+@media (max-width: 599px) {
   .header .paragraph {
-    padding: 30px;
+    padding: 0 30px;
   }
 }
 .header__form-box {
@@ -244,6 +255,11 @@ footer .row {
 .header__form-box p {
   font-size: 29px;
   font-weight: 900;
+}
+@media (max-width: 599px) {
+  .header__form-box p {
+    font-size: 22px;
+  }
 }
 .header__form-box form#planning {
   background-color: #FAFAFA;
@@ -262,17 +278,30 @@ footer .row {
   margin-bottom: 10px;
   margin-top: 18px;
 }
+@media (max-width: 599px) {
+  .header__form-box form#planning div label {
+    font-size: 16px;
+  }
+}
 .header__form-box form#planning div input,
 .header__form-box form#planning div input:focus,
 .header__form-box form#planning div input[type=text]:focus,
 .header__form-box form#planning div select {
   border-color: 1px solid #A4A89D;
   border: 1px solid #A4A89D;
-  padding: 20px;
+  padding: 5px;
   color: #A4A89D;
   border-radius: 3px;
   width: 100%;
   height: 40px;
+}
+@media (max-width: 599px) {
+  .header__form-box form#planning div input,
+  .header__form-box form#planning div input:focus,
+  .header__form-box form#planning div input[type=text]:focus,
+  .header__form-box form#planning div select {
+    height: 30px;
+  }
 }
 .header__form-box form#planning div input::placeholder {
   padding: 20px;
@@ -314,6 +343,11 @@ footer .row {
 @media (max-width: 947px) {
   .parallax-img {
     height: 45vh;
+  }
+}
+@media (max-width: 599px) {
+  .parallax-img {
+    background-position: 60% -30PX;
   }
 }
 @media (max-width: 430px) {
@@ -469,6 +503,11 @@ footer {
 footer span {
   font-size: 16px;
 }
+@media (max-width: 599px) {
+  footer span {
+    font-size: 14px;
+  }
+}
 footer .social-media {
   display: flex;
   align-items: baseline;
@@ -496,8 +535,18 @@ footer .legals li:first-child {
   font-size: 16px;
   padding-right: 25px;
 }
+@media (max-width: 599px) {
+  footer .legals li:first-child {
+    padding-right: 15px;
+  }
+}
 footer .legals li {
   transition: all 0.5s;
+}
+@media (max-width: 599px) {
+  footer .legals li a {
+    font-size: 14px;
+  }
 }
 footer .legals li:hover {
   color: #A4A89D;
