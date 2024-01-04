@@ -4,86 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tame your test</title>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="./sass/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="header__container">
             <div class="header__logo-box">
-                <img src="" alt="logo" class="header__logo">
+                <img src="./img/logo/logo.png" alt="logo" class="header__logo">
             </div>
 
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--main">It’s time for you to finally</span>
-                    <span class="heading-primary--sub">Tame Your Test!</span>
-                </h1>
-                <p class="paragraph">
-                    Get started with your test preparation with unique personalized courses and experts that will work with you hand in hand.
-                </p>
+            <div class="header__text-box .u-center-text">
+                <div class="row">
+                    <div class="col-1-of-2">
 
-                <div class="svg-logos">
+                        <h1 class="heading-primary u-center-text">
+                            <span class="heading-primary--main">It’s time for you to finally</span>
+                            <span class="heading-primary--sub">Tame Your Test!</span>
+                        </h1>
+                        <p class="paragraph">
+                            Get started with your test preparation with unique personalized courses and experts that will work with you hand in hand.
+                        </p>
+                        <div class="svg-logos">
+                            <img class="svg-img" src="./img/1200px-GMAT_LOGO_POS_RGB.svg@2x.png" alt=gmat"">
+                            <img class="svg-img" src="./img/1280px-TOEFL_Logo.svg@2x.png" alt="toefl">
+                            <img class="svg-img" src="./img/1280px-GRE_logo.svg@2x.png" alt="gre">
+                        </div>
+                    </div>
 
+                    <div class="col-1-of-2">
+                        <div class="header__form-box">
+                            <p class="u-center-text"><span class="span-block">Get a <span>FREE</span> personalized</span> planning session</p>
+                            <form id="planning">
+                                <div>  
+                                    <label for="name" class="form-label fw-bold">Full Name</label>
+                                    <input class="form-control" type="text" name="name" id="name" placeholder="eg: jaison.justus">
+                                </div>
+                                <div>
+                                    <label for="email" class="form-label fw-bold">Email</label>
+                                    <input class="form-control" type="email" name="email" id="emailInvitado" placeholder="eg: yourname@gmail.com">
+                                </div>
+                                <div>
+                                    <label for="cphone" class="form-label fw-bold">Phone Number</label>
+                                    <input class="form-control input_number" type="number" name="phone" id="phone-number" placeholder="eg: 04713457890" maxlength="10">
+                                </div>
+                                <div>
+                                    <label for="interest" class="form-label fw-bold">Phone Number</label>
+                                    <select name="interest" id="interest">
+                                        <option value="javascript">JavaScript</option>
+                                        <option value="php">PHP</option>
+                                        <option value="java">Java</option>
+                                        <option value="golang">Golang</option>
+                                        <option value="python">Python</option>
+                                        <option value="c#">C#</option>
+                                        <option value="C++">C++</option>
+                                        <option value="erlang">Erlang</option>
+                                    </select>
+                                </div>
+                                <button id="send" type="button" class="btn btn-primary rounded">Send</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>  
-
-        <div class="header__container">
-            <div class="header__form-box">
-                <p>Get a FREE personalized planning session</p>
-                <form id="planning">
-                    <div>  
-                        <label for="name" class="form-label fw-bold">Full Name</label>
-                        <input class="form-control" type="text" name="name" id="name" placeholder="eg: jaison.justus">
-                    </div>
-                    <div>
-                        <label for="email" class="form-label fw-bold">Email</label>
-                        <input class="form-control" type="email" name="email" id="emailInvitado" placeholder="eg: yourname@gmail.com">
-                    </div>
-                    <div>
-                        <label for="cphone" class="form-label fw-bold">Phone Number</label>
-                        <input class="form-control input_number" type="number" name="phone" id="phone-number" placeholder="eg: 04713457890" maxlength="10">
-                    </div>
-                    <div>
-                        <label for="interest" class="form-label fw-bold">Phone Number</label>
-                        <select name="interest" id="interest">
-                            <option value="javascript">JavaScript</option>
-                            <option value="php">PHP</option>
-                            <option value="java">Java</option>
-                            <option value="golang">Golang</option>
-                            <option value="python">Python</option>
-                            <option value="c#">C#</option>
-                            <option value="C++">C++</option>
-                            <option value="erlang">Erlang</option>
-                        </select>
-                    </div>
-                    <button id="send" type="button" class="btn btn-primary rounded">Send</button>
-                </form>
-            </div>
         </div>
-
-
     </header>
 
     <main>
-        <section class="parallax">
-            <p>We help you get all of the necessary foundations for getting into the program of your dreams.</p>
+        <section class="parallax parallax-img">
+            <div>
+                <p class="u-center-text"><span class="span-block">We help you get all of the necessary foundations</span> for getting into the program of your dreams.</p>
+            </div>
+
         </section>
 
         <section class="program">
             <div class="row">
                 <div class="col-1-of-3">
-                    <img src="" alt="">
+                    <img class="program-img" srcset="./img/Image/Image@2x.png, 
+                    ./img//Image/Image.png" alt="">
                 </div>
-                <div class="col-1-of-3">
+                <div class="col-1-of-2">
                     <h3>Is this the best program for me?</h3>
-                    <p>Getting into a top school or landing the job of your dreams requires excellent preparation and top scores.</p>
+                    <p>Getting into a top school or landing the job of your <span class="span-block">dreams requires excellent preparation and top scores.</span></p>
                     
-                    <p>Reach your goals with courses that let you:</p>
+                    <p class="program-subtitle">Reach your goals with courses that let you:</p>
                     <ul>
                         <li>Study whenever you want</li>
                         <li>Study wherever you like</li>
                         <li>Plan your perfect study schedule</li>
-                        <li>Get personal coaching/li>
+                        <li>Get personal coaching</li>
                     </ul>
                 </div>
             </div>
@@ -91,30 +105,26 @@
 
         <section class="know-students">
             <div class="row">
-                <div class="know__students-content">
-                    <h4 class="know__students-title">Is this the best program for me?</h4>
-                    <p>Getting into a top school or landing the job of your dreams requires excellent preparation and top scores.</p>
-                </div>
+                <h3 class="u-center-text know__students-title--02">Know some of the students who had Ace the test.</h4>
             </div>
             <div class="row">
-                <h3 class="know__students-title--02">Know some of the students who had Ace the test.</h4>
-                <div class="col-3">
+                <div class="col-1-of-3">
                     <div class="cards">
-                        <img src="" alt="card01">
+                        <img src="./img/group-57/group-57@2x.png" alt="card01">
                         <h2 class="heading-cards">Estanislao D.</h2>
                         <p>Jaison Justus,Tame Your Test really helped me realize the importance of having a solid structure when solving problems. Moreover, the course was very well prepared and had tons of material to practice and examples to drill down on specific problem types. Really pleased with the course. 16 Jun 2016</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-1-of-3">
                     <div class="cards">
-                        <img src="" alt="card02">
+                        <img src="./img/group-57 (1)/group-57@2x.png" alt="card03">
                         <h2 class="heading-cards">Estanislao D.</h2>
                         <p>by Jaison Justus,Tame Your Test really helped me realize the importance of having a solid structure when solving problems. Moreover, the course was very well prepared and had tons of material to practice and examples to drill down on specific problem types. Really pleased with the course. 16 Jun 2016</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-1-of-3">
                     <div class="cards">
-                        <img src="" alt="card03">
+                        <img src="./img/group-57 (2)/group-57@2x.png" alt="card02">
                         <h2 class="heading-cards">Estanislao D.</h2>
                         <p>by Jaison Justus,Tame Your Test really helped me realize the importance of having a solid structure when solving problems. Moreover, the course was very well prepared and had tons of material to practice and examples to drill down on specific problem types. Really pleased with the course. 16 Jun 2016</p>
                     </div>
@@ -123,27 +133,50 @@
         </section>
 
         <section class="guillermo">
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="guillermo__content">
+                        <h3>Hi, I’m Guillermo</h3>
+                        <p>I started Tame Your Test in an attempt to provide a better alternative to studying after suffering the horrible reality that is the GMAT.</p>
+                        <p>I was a victim of all the “magical solution courses” and I did everything you’re not supposed to do. Fortunately, I eventually developed a love-hate relationship with the process and reached great results!</p>
+                        
+                        <h2>Here’s a little bit more about me:</h2>
+                        <ul class="list__about">
+                            <li>Harvard MBA Class of 2024</li>
+                            <li>Accepted into HBS and Stanford GSB</li>
+                            <li>GMAT 720 (50 Quant)</li>
+                        </ul>
+                        <div class="school-logo">
+                            <img src="./img/harvard-h/harvard-h@2x.png" alt="harvard-logo">
+                            <img src="./img/stanford-h/stanford-h@2x.png" alt="standford-logo">
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-1-of-2">
+                    <img src="./img/Image(1)/Image@2x.png" alt="">
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="row">
-            <div class="col-3">
-                <span></span>
+            <div class="col-1-of-3">
+                <span>© Tame Your Test 2021</span>
             </div>
-            <div class="col-3">
+            <div class="col-1-of-3">
                 <div class="social-media">
-                    <img src="" alt="facebook">
-                    <img src="" alt="instagram">
-                    <img src="" alt="twitter">
+                    <img src="./img/svg/facebook-brands.svg" alt="facebook">
+                    <img src="./img/svg/instagram-brands.svg" alt="instagram">
+                    <img src="./img/svg/twitter-brands.svg" alt="twitter">
                 </div>
             </div>
-            <div class="col-3">
-               <ul class="legals">
-                <li>Terms of Use.</li>
-                <li>Privacy Policy</li>
-               </ul>
+            <div class="col-1-of-3">
+                <ul class="legals">
+                    <li><a href="" target="_blank">Terms of Use.</a></li>
+                    <li><a href="" target="_blank">Privacy Policy</a></li>
+                </ul>
             </div>
         </div>
     </footer>
