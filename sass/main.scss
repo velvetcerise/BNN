@@ -198,6 +198,11 @@ $gutter-vertical-small: 12px;
     }
 
 }
+
+footer .row {
+    max-width: unset;
+    padding: 20px;
+}
 // --- RESPONSIVE ----
 
 // --- LANDING STYLES ----
@@ -218,6 +223,9 @@ $gutter-vertical-small: 12px;
         justify-content: center;
     }
     
+    &__container {
+        animation: moveInBottom 4s;
+    }
     .heading-primary {
         position: relative;
         span {
@@ -235,8 +243,8 @@ $gutter-vertical-small: 12px;
             content: '';
             position: absolute;
             bottom: 0;
-            left: 0;
-            width: 80%;
+            left: -50px;
+            width: 100%;
             height: 1px;
             color: #000001;
             background-color: $gray-color;
@@ -249,12 +257,28 @@ $gutter-vertical-small: 12px;
         margin-top: 27px;
     }
     img.svg-img {
-        width: 205px !important;
+        object-fit: contain;
+        width: 205px;
+        @media (max-width: 900px) {
+            width: 105px;
+        }
+        @media (max-width: 599px) {
+            width: 85px;
+        }
     }
     img.svg-img:nth-child(2) {
         margin-top: 23px;
-        height: 55px !important;
+        height: 45px ;
         width: unset;
+        @media (max-width: 1020px) {
+            margin-bottom: 23px;
+        }
+        @media (max-width: 900px) {
+            height: 28px;
+        }
+        @media (max-width: 599px) {
+            height: 22px;
+        }
     }
 
     .paragraph {
@@ -263,6 +287,9 @@ $gutter-vertical-small: 12px;
         margin-top: 20px;
         text-align: center;
         padding: 0 70px;
+        @media (max-width: 430px) {
+            padding: 30px;
+        }
     }
 
 
@@ -347,15 +374,29 @@ $gutter-vertical-small: 12px;
 .parallax-img {
     height: 40vh;
     background-image: url('./../img/picture-01/picture-01@2x.png');
-
+    background-size: cover;
+    @media (max-width: 947px) {
+        height: 45vh;
+    }
+    @media (max-width: 430px) {
+        height: 50vh;
+    }
     p {
         color: $white-color;
         font-size: 40px;
         font-weight: 600;
+        @media (max-width: 947px) {
+            font-size: 35px;
+        }
     }
 
     div {
         transform: translate(0%, 120%);
+        height: 22px;
+        @media (max-width: 947px) {
+            transform: translate(0%, 120%);
+            padding: 10px;
+        }
     }
 }
 
@@ -425,20 +466,53 @@ $gutter-vertical-small: 12px;
 
     .cards {
         transition: transform 0.4s;
-        border: 1px solid red;
+        @media (max-width: 900px) {
+            display: table;
+            margin: 25px auto;
+            width: 60%;
+        }
         img {
             width:205px;
         }
-    }
 
-    .cards::hover  {
-        border: 1px solid pink;
-        transform: translateY(-1.5rem) scale(1.03);
+        p {
+            padding: 0 30px;
+            @media (max-width: 599px) {
+                padding: 0;
+            }
+        }
     }
 }
 
+.cards:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+    cursor: pointer;
+}
+
 .guillermo {
+    margin-top: 56px;
     padding: 20px;
+    overflow: hidden;
+
+    &__content  h3{
+        font-size: 29px;
+        font-weight: bold;
+        
+    }
+    p {
+        margin-bottom: 15px;
+    }
+
+    &__content h2 {
+        font-size: 22px;
+        margin-top: 35px;
+        margin-bottom: 18px;
+    }
+
+    .list__about li {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 
     img {
         width: 305px;
@@ -448,11 +522,12 @@ $gutter-vertical-small: 12px;
 
     .school-logo{
         img  {
-            width: 150px;
+            object-fit: contain;
+            width: 140px;
             margin: 0;
         }
         display: flex;
-        justify-content: center;
+        justify-content: left;
         flex-wrap: wrap;
     }
 }
@@ -460,8 +535,51 @@ $gutter-vertical-small: 12px;
 footer {
     margin-top: 116px;
     margin-bottom: 26px;
+    
+    span {
+        font-size: 16px;
+    }
+
+    .social-media {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        @media (max-width: 599px) {
+            justify-content: end;
+        }
+    }
+
+    .social-media img {
+        width: 35px;
+        transition: all 0.5s;
+        cursor: pointer;
+        padding-right: 10px;
+        &:hover {
+            opacity:0.6;
+        }
+        
+    }
 
     .legals {
         display: flex;
+        justify-content: flex-end;
+
+        li:first-child  {
+            font-size: 16px;
+            padding-right: 25px;
+        }
+
+        li {
+            transition: all 0.5s;
+            &:hover {
+                color: $gray-color;
+            }
+        }
+    }
+
+    .row .col-1-of-3 {
+        @media (max-width: 599px) {
+            text-align: end;
+        }
     }
 }

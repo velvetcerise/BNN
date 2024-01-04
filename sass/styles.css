@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Colors: */
 /* Colors: */
 *,
@@ -134,6 +133,11 @@ ul li {
   width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
 }
 
+footer .row {
+  max-width: unset;
+  padding: 20px;
+}
+
 .header {
   height: 95vh;
   padding: 20px;
@@ -153,6 +157,9 @@ ul li {
   display: flex;
   justify-content: center;
 }
+.header__container {
+  animation: moveInBottom 4s;
+}
 .header .heading-primary {
   position: relative;
 }
@@ -171,8 +178,8 @@ ul li {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 80%;
+  left: -50px;
+  width: 100%;
   height: 1px;
   color: #000001;
   background-color: #A4A89D;
@@ -184,12 +191,38 @@ ul li {
   margin-top: 27px;
 }
 .header img.svg-img {
-  width: 205px !important;
+  object-fit: contain;
+  width: 205px;
+}
+@media (max-width: 900px) {
+  .header img.svg-img {
+    width: 105px;
+  }
+}
+@media (max-width: 599px) {
+  .header img.svg-img {
+    width: 85px;
+  }
 }
 .header img.svg-img:nth-child(2) {
   margin-top: 23px;
-  height: 55px !important;
+  height: 45px;
   width: unset;
+}
+@media (max-width: 1020px) {
+  .header img.svg-img:nth-child(2) {
+    margin-bottom: 23px;
+  }
+}
+@media (max-width: 900px) {
+  .header img.svg-img:nth-child(2) {
+    height: 28px;
+  }
+}
+@media (max-width: 599px) {
+  .header img.svg-img:nth-child(2) {
+    height: 22px;
+  }
 }
 .header .paragraph {
   color: #000001;
@@ -197,6 +230,11 @@ ul li {
   margin-top: 20px;
   text-align: center;
   padding: 0 70px;
+}
+@media (max-width: 430px) {
+  .header .paragraph {
+    padding: 30px;
+  }
 }
 .header__form-box {
   display: flex;
@@ -271,14 +309,37 @@ ul li {
 .parallax-img {
   height: 40vh;
   background-image: url("./../img/picture-01/picture-01@2x.png");
+  background-size: cover;
+}
+@media (max-width: 947px) {
+  .parallax-img {
+    height: 45vh;
+  }
+}
+@media (max-width: 430px) {
+  .parallax-img {
+    height: 50vh;
+  }
 }
 .parallax-img p {
   color: #FAFAFA;
   font-size: 40px;
   font-weight: 600;
 }
+@media (max-width: 947px) {
+  .parallax-img p {
+    font-size: 35px;
+  }
+}
 .parallax-img div {
   transform: translate(0%, 120%);
+  height: 22px;
+}
+@media (max-width: 947px) {
+  .parallax-img div {
+    transform: translate(0%, 120%);
+    padding: 10px;
+  }
 }
 
 .program {
@@ -339,18 +400,51 @@ ul li {
 }
 .know-students .cards {
   transition: transform 0.4s;
-  border: 1px solid red;
+}
+@media (max-width: 900px) {
+  .know-students .cards {
+    display: table;
+    margin: 25px auto;
+    width: 60%;
+  }
 }
 .know-students .cards img {
   width: 205px;
 }
-.know-students .cards::hover   {
-  border: 1px solid pink;
+.know-students .cards p {
+  padding: 0 30px;
+}
+@media (max-width: 599px) {
+  .know-students .cards p {
+    padding: 0;
+  }
+}
+
+.cards:hover {
   transform: translateY(-1.5rem) scale(1.03);
+  cursor: pointer;
 }
 
 .guillermo {
+  margin-top: 56px;
   padding: 20px;
+  overflow: hidden;
+}
+.guillermo__content h3 {
+  font-size: 29px;
+  font-weight: bold;
+}
+.guillermo p {
+  margin-bottom: 15px;
+}
+.guillermo__content h2 {
+  font-size: 22px;
+  margin-top: 35px;
+  margin-bottom: 18px;
+}
+.guillermo .list__about li {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 .guillermo img {
   width: 305px;
@@ -359,11 +453,12 @@ ul li {
 }
 .guillermo .school-logo {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
 }
 .guillermo .school-logo img {
-  width: 150px;
+  object-fit: contain;
+  width: 140px;
   margin: 0;
 }
 
@@ -371,8 +466,46 @@ footer {
   margin-top: 116px;
   margin-bottom: 26px;
 }
+footer span {
+  font-size: 16px;
+}
+footer .social-media {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+@media (max-width: 599px) {
+  footer .social-media {
+    justify-content: end;
+  }
+}
+footer .social-media img {
+  width: 35px;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding-right: 10px;
+}
+footer .social-media img:hover {
+  opacity: 0.6;
+}
 footer .legals {
   display: flex;
+  justify-content: flex-end;
+}
+footer .legals li:first-child {
+  font-size: 16px;
+  padding-right: 25px;
+}
+footer .legals li {
+  transition: all 0.5s;
+}
+footer .legals li:hover {
+  color: #A4A89D;
+}
+@media (max-width: 599px) {
+  footer .row .col-1-of-3 {
+    text-align: end;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
